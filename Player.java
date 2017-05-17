@@ -1,9 +1,16 @@
+import javax.swing.*;
+import java.awt.*;
+
 public class Player {
    private int myX;
    private int myY;
    private int myCurrentHealth;
+   private ImageIcon sprite = new ImageIcon("Sprites/Player.png");
+   
    public Player() {
-      
+      myCurrentHealth = 150;
+      myX = 175;
+      myY = 400;
    }
    public int getX() {
       return myX;
@@ -11,8 +18,20 @@ public class Player {
    public int getY() {
       return myY;
    }
+   public void setX(int x) {
+      myX = x;
+   }
+   public void setY(int y) {
+      myY = y;
+   }
    public int getCurrentHealth() {
       return myCurrentHealth;
+   }
+   public Image getSprite() {
+      return sprite.getImage();
+   }
+   public void draw(Graphics myBuffer) {
+      myBuffer.drawImage(getSprite(), getX(), getY(), 50, 50, null);
    }
    public void attack() {
    
