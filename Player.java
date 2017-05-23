@@ -35,9 +35,9 @@ public class Player {
       myCurrentHealth = hp;
    }
    public void draw(Graphics myBuffer) {
-      myBuffer.drawImage(getSprite(), getX() - 25, getY() - 25, 50, 50, null);
+      myBuffer.drawImage(getSprite(), getX(), getY(), 50, 50, null);
    }
    public void attack() {
-   
+      
    }
 }
